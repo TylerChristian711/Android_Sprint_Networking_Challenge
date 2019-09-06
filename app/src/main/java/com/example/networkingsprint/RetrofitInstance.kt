@@ -17,6 +17,6 @@ object RetrofitInstance {
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
-        return
+        return retrofit.create(PokemonApiInterface::class.java).getPokemon()
     }
 }
